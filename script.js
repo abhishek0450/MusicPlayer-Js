@@ -4,6 +4,8 @@ const pauseButton = document.getElementById("pause");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const shuffleButton = document.getElementById("shuffle");
+const progress = document.getElementById('progress');
+const progressContainer = document.getElementById('progress-container');
 
 // const allSongs = [
 //   {
@@ -293,6 +295,21 @@ playButton.addEventListener("click", () => {
   }
 });
 
+function updateProgress(e) {
+    const { duration, currentTime } = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+  }
+
+function setProgress(e) {
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+  
+    audio.currentTime = (clickX / width) * duration;
+  }
+
+//Event Listeners
 pauseButton.addEventListener("click",  pauseSong);
 
 nextButton.addEventListener("click", playNextSong);
@@ -300,6 +317,10 @@ nextButton.addEventListener("click", playNextSong);
 previousButton.addEventListener("click", playPreviousSong);
 
 shuffleButton.addEventListener("click", shuffle);
+
+audio.addEventListener("timeupdate", updateProgress);
+
+progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener("ended", () => {
   const currentSongIndex = getCurrentSongIndex();
