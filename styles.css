@@ -266,6 +266,23 @@
   .playlist-song-delete:focus circle {
     fill: #ff0000;
   }
+
+  .progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
   
   @media (max-width: 700px) {
     .player,
@@ -367,22 +384,7 @@
       text-align: center;
     }
 
-    .progress-container {
-        background: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        margin: 10px 0;
-        height: 4px;
-        width: 100%;
-      }
-      
-      .progress {
-        background-color: #fe8daa;
-        border-radius: 5px;
-        height: 100%;
-        width: 0%;
-        transition: width 0.1s linear;
-      }
+  
   }
 
  
