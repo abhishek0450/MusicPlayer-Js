@@ -7,121 +7,95 @@ const shuffleButton = document.getElementById("shuffle");
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 
-// const allSongs = [
-//   {
-//     id: 0,
-//     title: "Scratching The Surface",
-//     artist: "Quincy Larson",
-//     duration: "4:25",
-//     src: "songs/Cool.mp3",
-//   },
-//   {
-//     id: 1,
-//     title: "Can't Stay Down",
-//     artist: "Quincy Larson",
-//     duration: "4:15",
-//     src: "songs/Cradles.mp3",
-//   },
-//   {
-//     id: 2,
-//     title: "Still Learning",
-//     artist: "Quincy Larson",
-//     duration: "3:51",
-//     src: "songs/Ocean.mp3",
-//   },
-//   {
-//     id: 3,
-//     title: "Cruising for a Musing",
-//     artist: "Quincy Larson",
-//     duration: "3:34",
-//     src: "songs/Outside.mp3",
-//   },
-//   {
-//     id: 4,
-//     title: "Never Not Favored",
-//     artist: "Quincy Larson",
-//     duration: "3:35",
-//     src: "songs/Pusher.mp3",
-//   },
-//   {
-//     id: 5,
-//     title: "From the Ground Up",
-//     artist: "Quincy Larson",
-//     duration: "3:12",
-//     src: "songs/SoMuchLeftToSay.mp3",
-//   },
-//   {
-//     id: 6,
-//     title: "Walking on Air",
-//     artist: "Quincy Larson",
-//     duration: "3:25",
-//     src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/walking-on-air.mp3",
-//   },
-//   {
-//     id: 7,
-//     title: "Can't Stop Me. Can't Even Slow Me Down.",
-//     artist: "Quincy Larson",
-//     duration: "3:52",
-//     src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cant-stop-me-cant-even-slow-me-down.mp3",
-//   },
-//   {
-//     id: 8,
-//     title: "The Surest Way Out is Through",
-//     artist: "Quincy Larson",
-//     duration: "3:10",
-//     src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/the-surest-way-out-is-through.mp3",
-//   },
-//   {
-//     id: 9,
-//     title: "Chasing That Feeling",
-//     artist: "Quincy Larson",
-//     duration: "2:43",
-//     src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/chasing-that-feeling.mp3",
-//   },
-// ];
 
 const allSongs = [
     {
       "title": "Death Bed",
       "artist": "Powfu",
-     // "artwork": "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
+      "artwork": "https://samplesongs.netlify.app/album-arts/death-bed.jpg",
      src: "https://samplesongs.netlify.app/Death%20Bed.mp3",
-      "id": 0
+      "id": 0,
+      "duration": "2:53",
     },
     {
       "title": "Bad Liar",
       "artist": "Imagine Dragons",
-     // "artwork": "https://samplesongs.netlify.app/album-arts/bad-liar.jpg",
+      "artwork": "https://samplesongs.netlify.app/album-arts/bad-liar.jpg",
      src: "https://samplesongs.netlify.app/Bad%20Liar.mp3",
-      "id": 1
+      "id": 1,
+      "duration": "4:20",
     },
     {
       "title": "Faded",
       "artist": "Alan Walker",
-      //"artwork": "https://samplesongs.netlify.app/album-arts/faded.jpg",
+      "artwork": "https://samplesongs.netlify.app/album-arts/faded.jpg",
       src: "https://samplesongs.netlify.app/Faded.mp3",
-      "id": 2
+      "id": 2,
+      "duration": "3:32",
     },
     {
       "title": "Hate Me",
       "artist": "Ellie Goulding",
-      //"artwork": "https://samplesongs.netlify.app/album-arts/hate-me.jpg",
+      "artwork": "https://samplesongs.netlify.app/album-arts/hate-me.jpg",
       src: "https://samplesongs.netlify.app/Hate%20Me.mp3",
-      "id": 3
+      "id": 3,
+      "duration": "3:06",
     },
     {
       "title": "Solo",
       "artist": "Clean Bandit",
-      //"artwork": "https://samplesongs.netlify.app/album-arts/solo.jpg",
+      "artwork": "https://samplesongs.netlify.app/album-arts/solo.jpg",
       src: "https://samplesongs.netlify.app/Solo.mp3",
-      "id": 4
+      "id": 4,
+      "duration": "3:42",
     },
     {
       "title": "Without Me",
       "artist": "Halsey",
-     // "artwork": "https://samplesongs.netlify.app/album-arts/without-me.jpg",
+      "artwork": "https://samplesongs.netlify.app/album-arts/without-me.jpg",
       src: "https://samplesongs.netlify.app/Without%20Me.mp3",
-      "id": 5
+      "id": 5,
+      "duration": "3:21",
+    },
+    {
+      "title": "Let Me Down Slowly",
+      "artist": "Alec Benjamin",
+      "artwork": "songs/artwork/letmedownSlowly.jpg",
+      src: "songs/Let-Me-Down-Slowly.mp3",
+      "id": 6,
+      "duration": "2:49",
+    },
+    {
+      "title": "Someone You Loved",
+      "artist": "Lewis Capaldi",
+      "artwork": "songs/artwork/someoneyouloved.jpg",
+      src: "/songs/Someone-You-Loved.mp3",
+      "id": 7,
+      "duration": "3:02",
+    },
+    {
+      "title": "Cradles",
+      "artist": "Sub Urban",
+      "artwork": "songs/artwork/cradles.jpeg",
+      src: "songs/Cradles.mp3",
+      "id": 8,
+      "duration": "3:30",
+    },
+    {
+      "title": "Ocean",
+      "artist": "Mike Perry",
+      "artwork": "songs/artwork/ocean.jpeg",
+      src: "songs/Ocean.mp3",
+      "id": 9,
+      "duration": "3:02",
+    },
+    {
+      "title": "Outside",
+      "artist": "Calvin Harris",
+      "artwork": "songs/artwork/outside.jpg",
+      src: "songs/Outside.mp3",
+      "id": 10,
+      "duration": "3:47",
     }
   ]
 
@@ -137,7 +111,9 @@ const playSong = (id) => {
   const song = userData?.songs.find((song) => song.id === id);
   audio.src = song.src;
   audio.title = song.title;
+  audio.artwork = song.artwork;
 
+  
   if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
     audio.currentTime = 0;
   } else {
@@ -145,6 +121,7 @@ const playSong = (id) => {
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
+  
 
   highlightCurrentSong();
   setPlayerDisplay();
@@ -156,6 +133,7 @@ const playSong = (id) => {
   });
 
 };
+
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
@@ -229,17 +207,49 @@ const deleteSong = (id) => {
 
   }
 
+
 };
+
+
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
   const songArtist = document.getElementById("player-song-artist");
+  const songArt = document.getElementById('player-album-art');
+  const songDuration = document.getElementById('endtime');
+  
+
   const currentTitle = userData?.currentSong?.title;
   const currentArtist = userData?.currentSong?.artist;
+  const currentArtwork = userData?.currentSong?.artwork;
+  const currentDuration = userData?.currentSong?.duration;
+ 
+  
 
+ 
   playingSong.textContent = currentTitle ? currentTitle : "";
   songArtist.textContent = currentArtist ? currentArtist : "";
+  songArt.innerHTML = currentArtwork ? `<img src="${currentArtwork}"/>` : "";
+  songDuration.textContent = currentDuration ? currentDuration : "";
+
+  
 };
+
+const songCurrentTime = document.getElementById('starttime');
+
+setInterval(() => {
+  let current = Math.floor(audio.currentTime); 
+  let minute = Math.floor(current / 60);
+  let second = current % 60;
+  minute = minute < 10 ?  minute : minute;
+  second = second < 10 ? '0' + second : second;
+  starttime.innerText = `${minute}:${second}`;
+  progresses.forEach(progress => {
+    progress.style.strokeDashoffset = 1414 - (1414 * ((current / audio.duration) * 100)) / 100;
+  })
+}, 1000);
+
+
 
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
@@ -295,6 +305,9 @@ playButton.addEventListener("click", () => {
   }
 });
 
+
+
+
 function updateProgress(e) {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
@@ -309,6 +322,9 @@ function setProgress(e) {
     audio.currentTime = (clickX / width) * duration;
   }
 
+
+
+
 //Event Listeners
 pauseButton.addEventListener("click",  pauseSong);
 
@@ -321,6 +337,8 @@ shuffleButton.addEventListener("click", shuffle);
 audio.addEventListener("timeupdate", updateProgress);
 
 progressContainer.addEventListener("click", setProgress);
+
+
 
 audio.addEventListener("ended", () => {
   const currentSongIndex = getCurrentSongIndex();
