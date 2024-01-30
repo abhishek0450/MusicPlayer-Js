@@ -69,7 +69,7 @@ const allSongs = [
       "title": "Someone You Loved",
       "artist": "Lewis Capaldi",
       "artwork": "songs/artwork/someoneyouloved.jpg",
-      src: "/songs/Someone-You-Loved.mp3",
+      src: "songs/Someone-You-Loved.mp3",
       "id": 7,
       "duration": "3:02",
     },
